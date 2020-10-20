@@ -1,0 +1,54 @@
+@import '../../styles/config';
+@import 'node_modules/foundation-sites/scss/util/util';
+
+.ui_banner {
+    line-height: $top-bar-height;
+    background: linear-gradient(to bottom, #333, #444, #555, #666, #999);
+    box-shadow: inset -2px 0 4px 0 rgba(0,0,0,0.59);
+    transition: right .5s;
+    position: fixed;
+    width: 100%;
+    z-index:12;
+    align-items: center;
+    opacity: 0.9;
+    text-align: center;
+    color: $white-color;
+    font-size: smaller;
+    scroll-behavior: unset;
+    bottom:0;
+
+    &__close {
+        display: block;
+        position: absolute;
+        cursor: pointer;
+        top: 0%;
+        right:0%;
+        z-index: 1;
+        border-radius: 50%;
+        color: $white-color;
+        font-size: 20px;
+        padding: 5px;
+
+        @media screen and (max-width: $argo-breakpoint-md) {
+            top: 8px;
+        }
+
+        &:hover {
+            background-color: $argo-color-gray-3;
+        }
+    }
+    &__text{
+        overflow: visible;
+        display: flex;
+        list-style-type: none;
+        margin:10px;
+        padding:10px; 
+        justify-content: space-between;
+
+    }
+    &__items{
+        &:hover {
+            color: $argo-color-gray-3;
+        }
+    }
+}
